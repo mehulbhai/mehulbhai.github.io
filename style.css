@@ -57,7 +57,7 @@ h1 {
   display: block;
   float: left;
   text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px, #533d4a 4px 4px, #533d4a 5px 5px, #533d4a 6px 6px;
-  min-width: 10px;
+  min-width: 30px;
   min-height: 10px;
   position: relative;
 }
