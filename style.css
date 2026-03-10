@@ -1,63 +1,73 @@
-@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+html {
+  height: 100%;
+}
 
 body {
-  margin: 0;
-  height: 100vh;
-  background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
   font-family: "Fjalla One", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
 }
 
-/* Container pulls everything to the right/center area */
-.content-box {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end; /* Aligns text to the right side of the box */
-  transform: rotate(-10deg) skew(-10deg); /* The "Signature" Tilt */
+.container {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 100%;
+  display: block;
+  position: absolute;
+  max-width: 225px;
 }
 
-/* Global Text Shadow for that 3D look */
-h1, h2, p, .restart-btn {
+.button {
+  float: left;
+  position: relative;
+  bottom: -65px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg);
+  color: #e55643;
   text-transform: uppercase;
-  margin: 0;
-  text-align: right; /* Aligns text lines to the right */
-  line-height: 0.85;
-  text-shadow: 
-    #533d4a 1px 1px, #533d4a 2px 2px, 
-    #533d4a 3px 3px, #533d4a 4px 4px;
-}
-
-/* Line 1 - Red */
-.tirp-title {
-  color: #e55643;
-  font-size: 55px;
-  margin-right: 40px; /* Offset to create the staggered look */
-}
-
-/* Line 2 - Green */
-.sub-title {
-  color: #2b9f5e;
-  font-size: 45px;
-  margin-right: 20px; /* Slightly less offset */
-  margin-top: 5px;
-}
-
-/* Line 3 - Yellow */
-.host-info {
-  color: #f1c83c;
-  font-size: 32px;
-  margin-right: 0px; /* Flush to the right */
-  margin-top: 5px;
-}
-
-/* Line 4 - Button */
-.restart-btn {
-  color: #e55643;
-  font-size: 16px;
-  margin-top: 30px;
-  margin-right: 60px; /* Pushes button back towards the middle */
+  opacity: 0;
+  visibility: hidden;
   cursor: pointer;
+}
+.button span {
+  transform: skew(-10deg);
+  display: block;
+  float: left;
+  text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px, #533d4a 4px 4px;
+}
+
+h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 42px;
+  margin: 0;
+  line-height: 47px;
+  letter-spacing: 2px;
+}
+
+.title {
+  transform: translateX(-50%) rotate(-10deg);
+  display: block;
+  float: left;
+  left: 100%;
+  position: relative;
+}
+.title span {
+  transform: skew(-10deg);
+  display: block;
+  float: left;
+  text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px, #533d4a 4px 4px, #533d4a 5px 5px, #533d4a 6px 6px;
+  min-width: 10px;
+  min-height: 10px;
+  position: relative;
+}
+
+.title:nth-child(1) {
+  color: #e55643;
+}
+.title:nth-child(2) {
+  color: #2b9f5e;
+}
+.title:nth-child(3) {
+  color: #f1c83c;
 }
