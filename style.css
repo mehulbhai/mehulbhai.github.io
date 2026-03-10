@@ -10,18 +10,18 @@ body {
 
 .container {
   transform: translate(-50%, -50%);
-  top: 100%;
-  left: 100%;
+  top: 50%;
+  left: 50%;
   display: block;
   position: absolute;
-  max-width: 100px;
+  max-width: 225px;
 }
 
 .button {
   float: left;
   position: relative;
   bottom: -65px;
-  left: 100%;
+  left: 50%;
   transform: translateX(-50%) rotate(-10deg);
   color: #e55643;
   text-transform: uppercase;
@@ -49,7 +49,7 @@ h1 {
   transform: translateX(-50%) rotate(-10deg);
   display: block;
   float: left;
-  left: 100%;
+  left: 50%;
   position: relative;
 }
 .title span {
@@ -57,7 +57,7 @@ h1 {
   display: block;
   float: left;
   text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px, #533d4a 4px 4px, #533d4a 5px 5px, #533d4a 6px 6px;
-  min-width: 30px;
+  min-width: 10px;
   min-height: 10px;
   position: relative;
 }
