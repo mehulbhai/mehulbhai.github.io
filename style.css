@@ -1,73 +1,66 @@
-@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
-html {
-  height: 100%;
-}
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
-body {
-  font-family: "Fjalla One", sans-serif;
-  background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
-}
-
-.container {
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  display: block;
-  position: absolute;
-  max-width: 300px;
-}
-
-.button {
-  float: left;
-  position: relative;
-  bottom: -65px;
-  left: 90%;
-  transform: translateX(-50%) rotate(-10deg);
-  color: #e55643;
-  text-transform: uppercase;
-  opacity: 0;
-  visibility: hidden;
-  cursor: pointer;
-}
-.button span {
-  transform: skew(-10deg);
-  display: block;
-  float: left;
-  text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px, #533d4a 4px 4px;
-}
-
-h1 {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 42px;
+/* 1. Full screen centering */
+body, html {
   margin: 0;
-  line-height: 47px;
-  letter-spacing: 2px;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
+  font-family: "Fjalla One", sans-serif;
+  overflow: hidden;
 }
 
-.title {
-  transform: translateX(-50%) rotate(-10deg);
-  display: block;
-  float: left;
-  left: 90%;
-  position: relative;
-}
-.title span {
-  transform: skew(-10deg);
-  display: block;
-  float: left;
-  text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px, #533d4a 4px 4px, #533d4a 5px 5px, #533d4a 6px 6px;
-  min-width: 10px;
-  min-height: 10px;
-  position: relative;
+/* 2. Container to handle the overall tilt and arrangement */
+.container {
+  display: flex;
+  flex-direction: column; /* Stacks lines 1, 2, and 3 */
+  align-items: center;
+  text-align: center;
+  transform: rotate(-10deg) skew(-10deg); /* The signature "TIRP" tilt */
 }
 
-.title:nth-child(1) {
+/* 3. Global Text Style (3D Shadows) */
+h1 {
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+  line-height: 0.85; /* Makes text tight and professional */
+  letter-spacing: 1px;
+  /* Thick 3D Shadow */
+  text-shadow: 
+    #533d4a 1px 1px, #533d4a 2px 2px, 
+    #533d4a 3px 3px, #533d4a 4px 4px, 
+    #533d4a 5px 5px, #533d4a 6px 6px;
+}
+
+/* 4. Individual Line Styling */
+.line-1 {
+  color: #e55643; /* Red */
+  font-size: 50px;
+  margin-bottom: 5px;
+}
+
+.line-2 {
+  color: #2b9f5e; /* Green */
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.line-3 {
+  color: #f1c83c; /* Yellow */
+  font-size: 35px;
+}
+
+/* 5. Restart Button */
+.restart-btn {
+  margin-top: 40px;
   color: #e55643;
-}
-.title:nth-child(2) {
-  color: #2b9f5e;
-}
-.title:nth-child(3) {
-  color: #f1c83c;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-shadow: #533d4a 1px 1px, #533d4a 2px 2px;
 }
