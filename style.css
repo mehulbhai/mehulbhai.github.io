@@ -21,7 +21,7 @@ body {
   float: left;
   position: relative;
   bottom: -65px;
-  left: 50%;
+  left: 100%;
   transform: translateX(-50%) rotate(-10deg);
   color: #e55643;
   text-transform: uppercase;
