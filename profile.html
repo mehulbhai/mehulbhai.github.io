@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Team | Navkriti Technologies</title>
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .team-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .team-intro {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .team-section {
+      margin-bottom: 3rem;
+    }
+
+    .team-section h2 {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .team-card {
+      background-color: var(--light);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .team-image {
+      height: 280px;
+      overflow: hidden;
+    }
+
+    .team-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .team-card:hover .team-image img {
+      transform: scale(1.05);
+    }
+
+    .team-info {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .team-info h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .team-position {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .team-bio {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .team-social {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .team-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 35px;
+      height: 35px;
+      background-color: #fff;
+      border-radius: 50%;
+      color: var(--primary);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .team-social a:hover {
+      background-color: var(--primary);
+      color: #fff;
+    }
+
+    .join-team {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: var(--light);
+      border-radius: 10px;
+    }
+
+    .join-team h3 {
+      margin-bottom: 1rem;
+    }
+
+    .join-team-btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      margin-top: 1rem;
+      background-color: var(--primary);
+      color: white;
+      border-radius: 5px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .join-team-btn:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body>
+   <!-- Header  -->
+   <header id="header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <span>NAVKRITI</span>
+          <span class="logo-accent">TECHNOLOGIES</span>
+        </div>
+        <div class="burger-menu" id="burger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <section class="section" style="padding-top: 120px;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Team</h2>
+        <p>Meet the passionate professionals behind Navkriti Technologies, driving innovation and excellence.</p>
+      </div>
+
+      <div class="team-content">
+        <div class="team-intro">
+          <p>Our diverse team of experts brings together a wealth of knowledge, creativity, and passion for technology. Each member contributes their unique skills and perspectives to deliver exceptional results for our clients.</p>
+        </div>
+
+        <div class="team-section">
+          <h2>Leadership</h2>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-image">
+                <img src="img/team1.jpg" alt="Chandril Jha">
+              </div>
+              <div class="team-info">
+                <h3>Chandril Jha</h3>
+                <div class="team-position">Founder & CEO</div>
+                <p class="team-bio">With extensive experience in the tech industry, Chandril brings strategic vision and leadership to drive innovation at Navkriti Technologies.</p>
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="team-card">
+              <div class="team-image">
+                <img src="img/team2.jpg" alt="Mehul Joshi">
+              </div>
+              <div class="team-info">
+                <h3>Mehul Joshi</h3>
+                <div class="team-position">Co-Founder</div>
+                <p class="team-bio">Mehul co-founded Navkriti Technologies and contributes strategic insight to help the company achieve its vision and goals.</p>
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://www.google.com/"><i class="fab fa-twitter"></i></a>
+                  <a href="https://github.com/mehulbhai"><i class="fab fa-github"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-image">
+                <img src="img/team3.jpg" alt="Bare Shandilya">
+              </div>
+              <div class="team-info">
+                <h3>Bare Shandilya</h3>
+                <div class="team-position">Marketing Head</div>
+                <p class="team-bio">Bare leads our marketing initiatives, developing strategies that effectively position our services and drive business growth.</p>
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-section">
+          <h2>Management & Operations</h2>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-image">
+                <img src="img/team4.jpg" alt="Ishika Desai">
+              </div>
+              <div class="team-info">
+                <h3>Ishika Desai</h3>
+                <div class="team-position">HR Department</div>
+                <p class="team-bio">Ishika manages our human resources, ensuring we attract and retain top talent while fostering a positive company culture.</p>
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="team-card">
+              <div class="team-image">
+                <img src="img/team5.jpg" alt="Prince Pathak">
+              </div>
+              <div class="team-info">
+                <h3>Prince Pathak</h3>
+                <div class="team-position">Assistant Manager</div>
+                <p class="team-bio">Prince supports our management team in coordinating projects and ensuring efficient operations across the company.</p>
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-image">
+                <img src="img/team6.jpg" alt="Satyam Gosh">
+              </div>
+              <div class="team-info">
+                <h3>Satyam Gosh</h3>
+                <div class="team-position">Accounts Manager</div>
+                <p class="team-bio">Satyam oversees our financial operations, ensuring fiscal responsibility and proper management of company resources.</p>
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="team-section">
+          <h2>IT Services</h2>
+          <div class="team-grid">
+            <div class="team-card">
+              <div class="team-image">
+                <img src="img/team7.jpg" alt="Raj Kumar">
+              </div>
+              <div class="team-info">
+                <h3>Raj Kumar</h3>
+                <div class="team-position">IT Service</div>
+                <p class="team-bio">Raj delivers exceptional IT services, providing technical solutions and support to meet our clients' diverse needs.</p>
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-stack-overflow"></i></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="team-card">
+              <div class="team-image">
+                <img src="img/team8.jpg" alt="Adarsh Thakur">
+              </div>
+              <div class="team-info">
+                <h3>Adarsh Thakur</h3>
+                <div class="team-position">IT Service</div>
+                <p class="team-bio">Adarsh brings technical expertise to our IT services team, implementing innovative solutions for our clients' technology needs.</p>
+                <div class="team-social">
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fab fa-github"></i></a>
+                  <a href="#"><i class="fab fa-codepen"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="join-team">
+          <h3>Interested in Joining Our Team?</h3>
+          <p>We're always looking for talented individuals who are passionate about technology and innovation.</p>
+          <a href="careers-page.html" class="join-team-btn">View Open Positions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">
+            <span>NAVKRITI</span>
+            <span class="logo-accent">TECHNOLOGIES</span>
+          </div>
+          <p>Your partner for innovative digital solutions. We help businesses thrive in the digital landscape through cutting-edge technology and creative strategies.</p>
+          <div class="social-links">
+            <a href="https://facebook.com/navkriti.link" target="_blank" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/navkriti_technologies/" target="_blank" class="social-link">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://youtube.com/@Navkriti_Technologies" target="_blank" class="social-link">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="#" target="_blank" class="social-link">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#purpose">Our Purpose</a></li>
+            <li><a href="index.html#clients">Our Clients</a></li>
+            <li><a href="index.html#contact">Contact Us</a>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="our-team-page.html">Our Team</a></li>
+            <li><a href="careers-page.html">Careers</a></li>
+            <li><a href="client-portal-page.html">Client Portal</a></li>
+            <li><a href="blog-page.html">Blog</a></li>
+            <li><a href="faq-page.html">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Legal & Policies</h4>
+          <ul>
+            <li><a href="privacy-policy-page.html">Privacy Policy</a></li>
+            <li><a href="terms-conditions-page.html">Terms & Conditions</a></li>
+            <li><a href="disclaimer-page.html">Disclaimer</a></li>
+            <li><a href="sitemap-page.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Navkriti Technologies. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="back-to-top" id="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
