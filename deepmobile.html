@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Mobile Logo Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+
+        .logo-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            opacity: 0; /* Hidden initially for GSAP to reveal */
+        }
+
+        .logo-image {
+            max-width: 600px;
+            height: auto;
+            filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.1));
+        }
+
+        /* Container for a "scan" reveal effect */
+        .reveal-box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo-container" id="logoParent">
+        <img src="16009.png" alt="Deep Mobile Logo" class="logo-image" id="mainLogo">
+    </div>
+
+    <script>
+        // GSAP Animation Timeline
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+        tl.to("#logoParent", {
+            duration: 1,
+            opacity: 1,
+            y: 0
+        })
+        // 1. Entrance: Logo slides up and bounces slightly
+        .from("#mainLogo", {
+            duration: 1.2,
+            y: 50,
+            scale: 0.8,
+            opacity: 0,
+            ease: "back.out(1.7)"
+        })
+        // 2. Subtle "Pulse": Makes the mascot feel like it's breathing
+        .to("#mainLogo", {
+            duration: 2,
+            scale: 1.02,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut"
+        });
+
+        // 3. Optional: Add a "floating" effect on mouse hover
+        const logo = document.getElementById('mainLogo');
+        logo.addEventListener('mousemove', (e) => {
+            const { offsetX, offsetY, target } = e;
+            const { clientWidth, clientHeight } = target;
+            
+            const xPos = (offsetX / clientWidth) - 0.5;
+            const yPos = (offsetY / clientHeight) - 0.5;
+
+            gsap.to(logo, {
+                duration: 0.5,
+                x: xPos * 20,
+                y: yPos * 20,
+                rotationY: xPos * 10,
+                rotationX: -yPos * 10,
+                ease: "power2.out"
+            });
+        });
+
+        logo.addEventListener('mouseleave', () => {
+            gsap.to(logo, {
+                duration: 1,
+                x: 0,
+                y: 0,
+                rotationY: 0,
+                rotationX: 0,
+                ease: "elastic.out(1, 0.3)"
+            });
+        });
+    </script>
+</body>
+</html>
 
